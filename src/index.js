@@ -1,19 +1,19 @@
 const express = require('express');
-const app = express();
 const mustache = require('mustache-express');
 const dotenv = require('dotenv');
 const path = require("path");
 const mainRoute = require('./routes/route');
 
 dotenv.config();
+const app = express();
 
 app.set('view engine', 'mustache');
-app.set('views', __dirname+'views');
+app.set('views',path.join(__dirname, 'views'));
 app.engine('mustache', mustache());
 
-app.use(express.static(__dirname+'../public'));
+app.use(express.static(path.join(__dirname, '../public')));
 
-app.get('/', mainRoute);
+app.use(mainRoute);
 
 //Erro 404
 app.use((req, res) =>{
