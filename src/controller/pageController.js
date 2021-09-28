@@ -1,5 +1,5 @@
 const home = (req, res) =>{
-    res.send("Rota Home");
+    res.render('./pages/page');
     //res.render('pages/page');
 }
 const dogs = (req, res) =>{
