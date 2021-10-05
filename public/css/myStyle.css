@@ -8,10 +8,24 @@
     left: 30;
 }
 
+.form input[value] {
+    padding-left: 30px;
+  }
+
 .container {
     max-width: 1100px;
     padding: 0 20px;
     margin: auto;
+}
+
+.footer div{
+    width: 90vw;
+    margin: auto;
+    border-top: 2px solid blue;
+}
+
+.active{
+    background-color: rgb(3, 0, 185);
 }
 
 .banner {
@@ -84,9 +98,6 @@
 @media (max-width: 400px) {
     header .container {
         flex-direction: column;
-    }
-    header input {
-        max-width: 100%;
     }
     ul li a {
         padding: 5px 10px;

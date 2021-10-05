@@ -5,18 +5,18 @@
                <a href="/">PetShopDev</a>
             </div>
             <div class="">
-                <form class="form absolute right-0" action="/search" method="GET">
+                <form class="form absolute right-20" action="/search" method="GET" >
                     <i class="fa-solid fa-magnifying-glass absolute top-2.5 left-2"></i>
-                    <input class="p-1 border-2 border-blue-300 rounded-lg" type="text" placeholder="Pesquise por raça">
+                    <input class="p-1 border-2 border-blue-300 rounded-lg" type="text" name="q" placeholder="Pesquise por raça" value="">
                 </form>
             </div>
         </div>
-        <div class="flex flex-col bg-blue-500 text-white">
+        <div class="menu flex flex-col bg-blue-500 text-white">
             <ul class="flex flex-row justify-around text-xl p-3">
-                <a class="hover: bg-blue-700 px-3 py-1 active: bg-blue-700 rounded-lg" href="/"><li>Todos</li></a>
-                <a class="hover:bg-blue-700 px-3 py-1 rounded-lg" href="/dogs"><li>Cachorros</li></a>
-                <a class="hover:bg-blue-700 px-3 py-1 rounded-lg" href="/cats"><li>Gatos</li></a>
-                <a class="hover:bg-blue-700 px-3 py-1 rounded-lg" href="/fishes"><li>Peixes</li></a>
+                <a class="hover:bg-blue-700 px-3 py-1 rounded-lg {{#home}}active{{/home}}" href="/"><li>Todos</li></a>
+                <a class="hover:bg-blue-700 px-3 py-1 rounded-lg {{#dogs}}active{{/dogs}}" href="/dogs"><li>Cachorros</li></a>
+                <a class="hover:bg-blue-700 px-3 py-1 rounded-lg {{#cats}}active{{/cats}}" href="/cats"><li>Gatos</li></a>
+                <a class="hover:bg-blue-700 px-3 py-1 rounded-lg {{#fishes}}active{{/fishes}}" href="/fishes"><li>Peixes</li></a>
             </ul>
         </div>
     </div>
